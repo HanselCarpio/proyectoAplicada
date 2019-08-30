@@ -1,29 +1,29 @@
 create database laptops
-use database laptops 
+use laptops 
 create table lista(
-idProduct varchar (10) constraint primary key not null,
+idProduct varchar (10) primary key not null,
 nameProduct varchar (50) not null,
-priceProduct double (11,11) not null,
+priceProduct int  not null,
 descProduct varchar (20) not null,
 imagLaptop varchar (50) not null
 )
 
 create database cameras
-use database camaras 
+use cameras 
 create table lista(
-idProduct varchar (10) constraint primary key not null,
+idProduct varchar (10) primary key not null,
 nameProduct varchar (50) not null,
-priceProduct double (11,11) not null,
+priceProduct int not null,
 descProduct varchar (20) not null,
 imagCamera varchar (50) not null
 )
 
 create database smartphones
-use database smartphones
+use smartphones
 create table lista(
-idProduct varchar (10) constraint primary key not null,
+idProduct varchar (10) primary key not null,
 nameProduct varchar (50) not null,
-priceProduct double (11,11) not null,
+priceProduct int not null,
 descProduct varchar (20) not null,
 imagSmartPhone varchar (50) not null
 )

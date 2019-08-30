@@ -1,13 +1,3 @@
-
-CREATE DATABASE "dbPelon"
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'Spanish_Costa Rica.1252'
-    LC_CTYPE = 'Spanish_Costa Rica.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
-
 CREATE SCHEMA main
     AUTHORIZATION postgres;
 	
@@ -73,6 +63,7 @@ CREATE TABLE main.category
 CREATE TABLE main.suppliers
 (
 	"idSupplier" integer NOT NULL,
+	"keySupplier" character varying(20)[] NOT NULL,
 	"nameSupplier" character varying(30)[] NOT NULL,
 	"phonoNumber" character varying(20)[] NOT NULL,
 	"email" character varying(40)[] NOT NULL, 
@@ -85,4 +76,3 @@ CREATE TABLE main.Prod_Supp
 	"idProduct" integer NOT NULL REFERENCES main.products("idProduct"),
 	PRIMARY KEY ("idSupplier", "idProduct")
 )
-
