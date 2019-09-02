@@ -7,7 +7,7 @@
     $config->set('viewFolder', 'view/');
     
     $config->set('dbhost', '163.178.107.130');
-    $config->set('dbname', 'hc_laptops');
+    $config->set('dbname', 'hc_smartphones');
     $config->set('dbuser', 'laboratorios');
     $config->set('dbpass', 'UCRSA.118');
     
