@@ -45,7 +45,7 @@
                     <!--modo de visualizacion horizontal-->
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="?controlador=Default" >Inicio</a></li>  
-                        <li><a href="#bienvenido">Productos</a></li>
+                        <li><a href="?controlador=Articulo&accion=cargarArticulos">Productos</a></li>
                         <li><a href="?controlador=Articulo&accion=cargarCategorias#admin">Registrar</a></li>                        
                     </ul>
                 </div>

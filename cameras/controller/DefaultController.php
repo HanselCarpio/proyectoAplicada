@@ -15,6 +15,10 @@ class DefaultController{
     public function mostrarRegistraArticulo(){  
         $this->view->show("registrarArticuloView.php",null);
     }
+    
+    public function mostrarCargarArticulo(){  
+        $this->view->show("cargarArticulosView.php",null);
+    }
            
 } // fin clase
 

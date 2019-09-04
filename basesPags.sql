@@ -29,7 +29,7 @@ VALUES
 
 CREATE PROCEDURE sp_cargarArticulos()
 SELECT listaP.idProduct, listaP.nameProduct as articulo, listaP.priceProduct, listaP.descProduct, listaP.category, listaP.imagLaptop
-FROM articulo
+FROM listaP
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -57,15 +57,15 @@ VALUES
 ("6", "PowerShot silver" , 2200 , "silver", "camera", "PowerShot_Silver.jpg")
 
 CREATE PROCEDURE sp_insertarArticulo
-(idPRoduct varchar(10), nameProduct varchar(50), priceProduct int, descProduct varchar(20), category varchar(50), imagLaptop varchar(50)) 
+(idPRoduct varchar(10), nameProduct varchar(50), priceProduct int, descProduct varchar(20), category varchar(50), imagCamera varchar(50)) 
 INSERT INTO listaP
-(idProduct, nameProduct , priceProduct, descProduct, category, imagLaptop) 
+(idProduct, nameProduct , priceProduct, descProduct, category, imagCamera) 
 VALUES 
-(idProduct, nameProduct , priceProduct, descProduct, category, imagLaptop)
+(idProduct, nameProduct , priceProduct, descProduct, category, imagCamera)
 
 CREATE PROCEDURE sp_cargarArticulos()
-SELECT listaP.idProduct, listaP.nameProduct as articulo, listaP.priceProduct, listaP.descProduct, listaP.category, listaP.imagLaptop
-FROM articulo
+SELECT listaP.idProduct, listaP.nameProduct as articulo, listaP.priceProduct, listaP.descProduct, listaP.category, listaP.imagCamera
+FROM listaP
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -81,7 +81,7 @@ imagSmartPhone varchar (50) not null
 )
 
 INSERT INTO listaP
-(idProduct, nameProduct , priceProduct, descProduct, category, imagLaptop) 
+(idProduct, nameProduct , priceProduct, descProduct, category, imagSmartPhone) 
 VALUES 
 ("1", "iphone XR" , 1200 , "negro", "smartphone", "iphone_XR.jpg"),
 ("2", "LG Q60" , 1000 , "negro", "smartphone", "lg_q60.jpg"),
@@ -91,13 +91,13 @@ VALUES
 ("6", "Xperia 10" , 2200 , "negro", "smartphone", "Xperia_10.jpg")
 
 CREATE PROCEDURE sp_insertarArticulo
-(idPRoduct varchar(10), nameProduct varchar(50), priceProduct int, descProduct varchar(20), category varchar(50), imagLaptop varchar(50)) 
+(idPRoduct varchar(10), nameProduct varchar(50), priceProduct int, descProduct varchar(20), category varchar(50), imagSmartPhone varchar(50)) 
 INSERT INTO listaP
-(idProduct, nameProduct , priceProduct, descProduct, category, imagLaptop) 
+(idProduct, nameProduct , priceProduct, descProduct, category, imagSmartPhone) 
 VALUES 
-(idProduct, nameProduct , priceProduct, descProduct, category, imagLaptop)
+(idProduct, nameProduct , priceProduct, descProduct, category, imagSmartPhone)
 
 CREATE PROCEDURE sp_cargarArticulos()
-SELECT listaP.idProduct, listaP.nameProduct as articulo, listaP.priceProduct, listaP.descProduct, listaP.category, listaP.imagLaptop
-FROM articulo
+SELECT listaP.idProduct, listaP.nameProduct as articulo, listaP.priceProduct, listaP.descProduct, listaP.category, listaP.imagSmartPhone
+FROM listaP
 
