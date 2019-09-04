@@ -35,6 +35,7 @@ CREATE TABLE main.products
     "descProduct" character varying(100)[] NOT NULL,
     "imageProduct" character varying(50)[] NOT NULL,
 	"idCategory" integer NOT NULL REFERENCES main.category("idCategory"),
+	"status" char not null check(status= '[S]' or status='[s]' or status = '[n]' or status='[N]');
     PRIMARY KEY ("idProduct", "idCategory")
 )
 
