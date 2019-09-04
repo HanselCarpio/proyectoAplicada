@@ -40,7 +40,7 @@ class ArticuloController {
         require 'model/ArticuloModel.php';
         $items = new ArticuloModel();
         $data['registro'] = $items->cargarArticulos();
-//        $this->view->show('registrarComboView.php', $data);
+        $this->view->show('cargarArticulosView.php', $data);
     }
 
     public function registrarArticulo() {
@@ -112,7 +112,7 @@ class ArticuloController {
         $data['registro'] = $items->registrar($idProduct, $nombre, $Precio, $Descripcion, $Categoria ,$file);
 
 
-        $this->view->show("indexView.php", null);
+        $this->view->show("cargarArticulosView.php", null);
         echo "<script>";
         echo json_encode('Se ha insertado correctamente');
         echo "MostrarOwnerForms('view/confirmacionView.php');";
