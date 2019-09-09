@@ -15,6 +15,8 @@ public class Persons {
     private String namePage;
     private String url;
     private String email;
+    private String code;
+    private String status;
     
 
     public Persons() {
@@ -22,15 +24,20 @@ public class Persons {
         this.namePage = "";
         this.url = "";
         this.email = "";
-        
+        this.code="";
+        this.status="";
     }
 
-    public Persons(int idPage, String namePage, String url, String email) {
+    public Persons(int idPage, String namePage, String url, String email, String code, String status) {
         this.idPage = idPage;
         this.namePage = namePage;
         this.url = url;
         this.email = email;
+        this.code = code;
+        this.status = status;
     }
+
+    
 
     public int getIdPage() {
         return idPage;
@@ -64,9 +71,28 @@ public class Persons {
         this.email = email;
     }
 
-    @Override
+    
+
+    
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+   @Override
     public String toString() {
-        return "Persons{" + "idPage=" + idPage + ", namePage=" + namePage + ", url=" + url + ", email=" + email + '}';
+        return "Persons{" + "idPage=" + idPage + ", namePage=" + namePage + ", url=" + url + ", email=" + email + ", code=" + code + ", status=" + status + '}';
     }
 
 }

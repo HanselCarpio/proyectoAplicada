@@ -24,8 +24,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-        txaDialog.setEditable(false);
-        talkDai();
+        
 
     }
 
@@ -39,9 +38,6 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane = new javax.swing.JDesktopPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txaDialog = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         insertMaterial = new javax.swing.JMenuItem();
@@ -50,33 +46,15 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txaDialog.setColumns(20);
-        txaDialog.setRows(5);
-        jScrollPane1.setViewportView(txaDialog);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/BilioDAI.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        jDesktopPane.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout jDesktopPaneLayout = new javax.swing.GroupLayout(jDesktopPane);
         jDesktopPane.setLayout(jDesktopPaneLayout);
         jDesktopPaneLayout.setHorizontalGroup(
             jDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPaneLayout.createSequentialGroup()
-                .addGap(670, 670, 670)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 1500, Short.MAX_VALUE)
         );
         jDesktopPaneLayout.setVerticalGroup(
             jDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPaneLayout.createSequentialGroup()
-                .addGap(330, 330, 330)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jDesktopPaneLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 750, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Register");
@@ -137,14 +115,13 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     public void talkDai() {// envia texto a D.A.I
         String dai = "Hola, mi nombre es D.A.I ";
-        txaDialog.append(dai + "\n");
-
+        
     }
 
     private void insertMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertMaterialActionPerformed
 
         try {
-            LoanBooks loanBooks = new LoanBooks();
+            register loanBooks = new register();
             
             Principal.jDesktopPane.add(loanBooks);
             loanBooks.setVisible(true);
@@ -158,7 +135,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void loanBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loanBooksActionPerformed
       try {
-            LoanBooks loanBooks = new LoanBooks();
+            register loanBooks = new register();
             
             Principal.jDesktopPane.add(loanBooks);
             loanBooks.setVisible(true);
@@ -219,11 +196,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenuItem insertMaterial;
     public static javax.swing.JDesktopPane jDesktopPane;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem loanBooks;
-    private javax.swing.JTextArea txaDialog;
     // End of variables declaration//GEN-END:variables
 }

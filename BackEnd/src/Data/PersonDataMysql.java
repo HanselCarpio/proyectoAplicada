@@ -29,15 +29,16 @@ dataBaseMysql conexion = new dataBaseMysql();
 
     
 
-    public  ResultSet getTable(String consult) {
-        Statement st;
-        ResultSet datos=null;
-        try{
-            st=con.createStatement();
-            datos=st.executeQuery(consult);
-        }catch(Exception e){ System.out.print(e.toString());}
-        return datos;
-    }
+//    public static ResultSet getTable(String consult) {
+//        
+//        Statement st;
+//        ResultSet datos=null;
+//        try{
+//            st=con.createStatement();
+//            datos=st.executeQuery(consult);
+//        }catch(Exception e){ System.out.print(e.toString());}
+//        return datos;
+//    }
 
     public ResultSet idFaltanteMysql(int valor) throws SQLException {
         // Persons persons=new Persons();
